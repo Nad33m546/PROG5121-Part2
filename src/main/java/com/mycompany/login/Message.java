@@ -122,25 +122,25 @@ public class Message {
         
         switch (choice) {
             
-            case 1:
-                
+            case 1 -> {
                 totalMessages++;
                 
                 return "Message successfully sent.";
+            }
                 
-            case 2:
-                    
+            case 2 -> {
                 return "Press 0 to delete the message.";
+            }
                 
-            case 3: 
-                
+            case 3 -> {
                 storeMessage();
                 
                 return "MEssage successfully stored.";
+            }
                 
-            default:
-                
+            default -> {
                 return "Invalid option.";
+            }
         } 
     }
     
