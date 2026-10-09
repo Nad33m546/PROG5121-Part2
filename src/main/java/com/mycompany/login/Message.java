@@ -22,7 +22,7 @@ public class Message {
         
         messageNumber++;
         
-        genearteMessageID();
+        generteMessageID();
         createMessageHash();
     }
     
@@ -39,7 +39,7 @@ public class Message {
     }
     
     //Generate a random 10-digit Message ID
-    private void genearteMessageID() {
+    private void generteMessageID() {
         
         Random random = new Random();
         
@@ -56,7 +56,7 @@ public class Message {
     }
     
     //Check recipient cellphone number
-    public String checkrecipientCell(){
+    public String checkRecipientCell(){
         
         if (recipient.matches("^\\+27[0-9]{9}$")) {
             return "Cell phone number successfully captured.";
@@ -68,7 +68,7 @@ public class Message {
     }
     
     //Check message length
-    public String CheckMessagelength() {
+    public String checkMessageLength() {
         
         if (messageText.length() <=250) {
             
@@ -135,7 +135,7 @@ public class Message {
             case 3 -> {
                 storeMessage();
                 
-                return "MEssage successfully stored.";
+                return "Message successfully stored.";
             }
                 
             default -> {
