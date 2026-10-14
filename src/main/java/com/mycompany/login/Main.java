@@ -50,17 +50,21 @@ public class Main {
         // ==============================
         
         if (login.checkUserName()) {
-            
-            System.out.println(
-                   "Username is not correctly formatted; "
-                   + "please ensure that your username contains "
-                   + "an underscore and is not more then five "
-                   + "charcters in length."
-            );
-            
-            scanner.close();
-            return;
-        }
+
+    System.out.println("Username successfully captured.");
+
+} else {
+
+    System.out.println(
+            "Username is not correctly formatted; "
+            + "please ensure that your username contains "
+            + "an underscore and is no more than five "
+            + "characters in length."
+    );
+
+    scanner.close();
+    return;
+}
         
         if (login.checkPasswordComplexity()) {
             
@@ -152,9 +156,9 @@ public class Main {
             System.out.println("==============================");
             System.out.println("1. Send Messages");
             System.out.println("2. Show recently sent messages");
-            System.out.print("3. Quit");
+            System.out.println("3. Quit");
             
-            System.out.println("Choose an option: ");
+            System.out.print("Choose an option: ");
             
             String option = scanner.nextLine();
             

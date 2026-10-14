@@ -20,10 +20,11 @@ public class Login {
     this.lastName = lastName;
 }
 
-//Check if username is correctly formatted
+// Check if username is correctly formatted
 public boolean checkUserName() {
-
-    return username.contains("_") && username.length() <= 5;
+    return username != null
+            && username.contains("_")
+            && username.length() <= 5;
 }
 
 //Check if password meets complexcity requirements
