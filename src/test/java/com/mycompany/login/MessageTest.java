@@ -39,7 +39,7 @@ public class MessageTest {
     
     //Test 3: A valid SouthAfrican cellphone number
     @Test
-    public void testValidREcipientCell() {
+    public void testValidRecipientCell() {
         Message message = new Message(
                 "1234567890",
                 "+27718693002",
