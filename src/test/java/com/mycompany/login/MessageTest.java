@@ -80,6 +80,79 @@ public class MessageTest {
         assertTrue(message.checkMessageID());
     }
     
-    //Test 6: Message hash contains the first and last words 
+    //Test 6: Message hash contains the first and last words
+    @Test
+    public void testMessageHash() {
+        Message message = new Message(
+                "1234567890",
+                "+27718693002",
+                "Hi Mike, can you join us tonight?"
+        );
+        
+        String hash = message.createMessageHash();
+        
+        assertTrue(hash.startsWith("12:"));
+        assertTrue(hash.endsWith("HITONIGHT"));
+        assertEquals(hash.toUpperCase(), hash);
+    }
     
+    //Test 7: Send a message
+    @Test
+    public void testSendMessage() {
+        Message message = new Message(
+                "1234567890",
+                "+27718693002",
+                "Hello there."
+        );
+        
+        assertEquals(
+                "Message successfully sent.",
+                message.SentMessage(1)
+        );
+    }
+    
+    //Test 8: Disregard a message
+    @Test
+    public void testDisregardMessage() {
+        Message message = new Message(
+                "1234567890",
+                "+27718693002",
+                "Hello there."
+        );
+        
+        assertEquals(
+                "Press 0 to delete message.",
+                message.SentMessage(2)
+        );
+    }
+    
+    //Test 9: Store a message
+    @Test
+    public void testStoreMessage() {
+        Message message = new Message(
+                "123456789",
+                "+27718693002",
+                "Hello there."
+        );
+        
+        assertEquals(
+                "Message successfully stored.",
+                message.SentMessage(3)
+        );
+    }
+    
+    //Test 10: Message deatils are displayed
+    @Test
+    public void testPrintMessages() {
+        Message message = new Message(
+                "1234567890",
+                "+27718693002",
+                "Hell there."
+        );
+        
+        String details = message.printMessages();
+        assertTrue(details.contains("1234567890"));
+        assertTrue(details.contains("+27718693002"));
+        assertTrue(details.contains("Hello there."));
+    }  
 }
