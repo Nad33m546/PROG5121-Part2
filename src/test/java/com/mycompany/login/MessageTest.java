@@ -121,7 +121,7 @@ public class MessageTest {
         );
         
         assertEquals(
-                "Press 0 to delete message.",
+                "Press 0 to delete the message.",
                 message.SentMessage(2)
         );
     }
@@ -147,7 +147,7 @@ public class MessageTest {
         Message message = new Message(
                 "1234567890",
                 "+27718693002",
-                "Hell there."
+                "Hello there."
         );
         
         String details = message.printMessages();
